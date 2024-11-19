@@ -45,7 +45,7 @@ def train_ddqn(env, episodes, gamma=0.99, epsilon=1.0, epsilon_min=0.1, epsilon_
 
         while not done:
             if np.random.rand() < epsilon:
-                action = env.action_space.sample()  # 探索：随机选择动作
+                action = env.action_space.sample() 
             else:
                 state_tensor = torch.FloatTensor(state).to(device).unsqueeze(0)
                 action = torch.argmax(policy_net(state_tensor)).item()  # 利用：选择 Q 值最大的动作

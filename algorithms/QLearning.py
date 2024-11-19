@@ -3,14 +3,6 @@ import gym
 import matplotlib.pyplot as plt
 
 def train_qlearning(env, episodes, alpha=0.1, gamma=0.99, epsilon=1.0,epsilon_decay=0.95):
-    """
-    使用 Q-Learning 算法训练 CartPole 环境，并绘制奖励图
-    :param env: 环境实例
-    :param episodes: 训练的轮次
-    :param alpha: 学习率
-    :param gamma: 折扣因子
-    :param epsilon: 探索率
-    """
     # 离散化状态空间
     state_space_size = (50, 50, 20, 20)  
     action_space_size = env.action_space.n

@@ -39,7 +39,7 @@ def train_actor_critic(env, episodes, gamma=0.99, lr=1e-3):
     input_dim = env.observation_space.shape[0]
     output_dim = env.action_space.n
 
-    # 初始化Actor和Critic网络
+    
     actor = Actor(input_dim, output_dim)
     critic = Critic(input_dim)
     actor_optimizer = optim.Adam(actor.parameters(), lr=lr)
